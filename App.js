@@ -13,28 +13,30 @@ displaybox.appendChild(newh1);
 let mytimer;
 
 calculatebtn.addEventListener("click", () => {
-  clearInterval(mytimer);
+  clearTimeout(mytimer); // clear old timeout
   const age = inputbox.value.trim();
   answer.style.display = "none";
   result.innerHTML = "";
+  newh1.innerHTML = "";
 
   if (age === "") {
     newh1.innerHTML = "Please enter your age below...";
-    mytimer = setInterval(() => {
+    mytimer = setTimeout(() => {
       newh1.innerHTML = "";
     }, 4000);
   } else if (isNaN(age)) {
     newh1.innerHTML = "Please enter a number...";
     inputbox.value = "";
-    mytimer = setInterval(() => {
+    mytimer = setTimeout(() => {
       newh1.innerHTML = "";
     }, 4000);
+    inputbox.value = "";
   } else {
     answer.style.display = "block";
     let remaining_years = 90 - age;
     let remaining_weeks = remaining_years * 52;
-    let formmated = remaining_weeks.toLocaleString();
-    result.innerHTML = formmated;
+    let formatted = remaining_weeks.toLocaleString();
+    result.innerHTML = formatted;
     inputbox.value = "";
   }
 });

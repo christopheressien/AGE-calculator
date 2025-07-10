@@ -4,11 +4,12 @@ const calculatebtn = document.querySelector("#calculate_btn");
 const resetbtn = document.querySelector("#reset_btn");
 const result = document.querySelector("#result");
 const answer = document.querySelector("#answer");
+const refresh = document.querySelector("#refresh");
 
 let newh1 = document.createElement("h1");
 newh1.style.color = "white";
 displaybox.appendChild(newh1);
-newh1.innerHTML = "Please enter your age below...";
+
 let mytimer;
 
 calculatebtn.addEventListener("click", () => {
@@ -32,7 +33,7 @@ calculatebtn.addEventListener("click", () => {
 });
 
 resetbtn.addEventListener("click", () => {
-  answer.innerHTML = "";
+  refresh.click();
 });
 
 mytimer = setInterval(() => {

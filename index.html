@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/output.css" />
+    <title>AGE CALCULATOR</title>
+  </head>
+  <body class="overflow-x-hidden overflow-hidden">
+    <div
+      class="bg-[url('/images/sunset.jpg')] bg-cover bg-center w-full min-h-screen flex justify-center items-start pt-[60px] overflow-hidden"
+    >
+      <div
+        class="backdrop-blur-[5px] py-[80px] sm:py-[60px] bg-white/15 rounded-xl flex flex-col justify-center items-center p-2 w-[90%] max-w-[600px] overflow-hidden sm:h-[700px] xl:h-[500px] sm:w-[70%] xl:w-[60%]"
+      >
+        <h1 class="text-white text-center text-[20px] mb-3 font-bold">
+          Our life in Weeks App
+        </h1>
+        <p
+          class="text-white text-center mb-3 font-bold font-Montserrat text-[12px] sm:text-[15px]"
+        >
+          Assuming that we are lucky enough to live in 90 years.
+        </p>
+        <div
+          id="display_box"
+          class="bg-black h-[200px] sm:h-[300px] border w-[70%] sm:w-[60%] xl:w-[50%] rounded-xl mb-3 flex justify-center items-center xl:h-[500px]"
+        >
+          <h1
+            id="answer"
+            class="text-white w-[80px] text-center h-[40px] mb-10 hidden"
+          >
+            You have
+            <span id="result" class="font-bold text-2xl font-sans">2000</span>
+            years left
+          </h1>
+        </div>
+        <input
+          id="input_box"
+          type="text"
+          placeholder="Enter your age"
+          class="backdrop-blur-[4px] border-b border-white bg-white/16 mb-3 p-1.5 outline-none w-[90%] placeholder:text-white font-bold focus:bg-white text-center sm:w-[60%]"
+        />
+        <button
+          id="calculate_btn"
+          class="bg-yellow-400 mb-3 w-[90%] hover:bg-black text-white sm:w-[60%] p-1"
+        >
+          Calculate
+        </button>
+        <button
+          id="reset_btn"
+          class="bg-gray-700 w-[90%] sm:w-[60%] p-1 text-white"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+    <script src="App.js"></script>
+  </body>
+</html>
